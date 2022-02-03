@@ -25,7 +25,11 @@ function Navbar() {
               height="36px"
             />
             <p
-              className={pathMatchRoute("/") ? "navbarListItemNameActive" : ""}
+              className={
+                pathMatchRoute("/")
+                  ? "navbarListItemNameActive"
+                  : "navbarListItemName"
+              }
             >
               Explore
             </p>
@@ -38,10 +42,12 @@ function Navbar() {
             />
             <p
               className={
-                pathMatchRoute("/offers") ? "navbarListItemNameActive" : ""
+                pathMatchRoute("/offer")
+                  ? "navbarListItemNameActive"
+                  : "navbarListItemName"
               }
             >
-              Offer
+              Offers
             </p>
           </li>
           <li className="navbarListItem" onClick={() => navigate("/profile")}>
@@ -52,7 +58,9 @@ function Navbar() {
             />
             <p
               className={
-                pathMatchRoute("/profile") ? "navbarListItemNameActive" : ""
+                pathMatchRoute("/profile")
+                  ? "navbarListItemNameActive"
+                  : "navbarListItemName"
               }
             >
               Profile
